@@ -2,14 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px red solid
 }
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 40px;
     height: 100vh;
     width: 100%;
+}
+
+.header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 900;
 }
 
 .container {
@@ -19,6 +28,11 @@ body {
     height: 500px;
     width: 500px;
     border: 1px black solid;
+}
+
+.button {
+    display: flex;
+    gap: 50px;
 }
 
 .cell {

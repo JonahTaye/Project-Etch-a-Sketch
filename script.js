@@ -1,4 +1,4 @@
-const container = document.querySelector("div")
+const container = document.querySelector(".container")
 let gridSize = 16
 let widthSize = container.clientWidth / gridSize
 let heightSize = container.clientHeight / gridSize
