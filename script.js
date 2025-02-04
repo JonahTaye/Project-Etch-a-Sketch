@@ -3,6 +3,7 @@ let gridSize = 16
 let widthSize = container.clientWidth / gridSize
 let heightSize = container.clientHeight / gridSize
 let grid = []
+let isMousedown = false
 
 for (i = 0; i < gridSize * gridSize; i++) {
     grid[i] = document.createElement("div")
@@ -15,8 +16,6 @@ for (i = 0; i < gridSize * gridSize; i++) {
     container.appendChild(grid[i])
 
 }
-
-isMousedown = false
 
 document.querySelectorAll(".cell").forEach(box => {
     box.addEventListener("mousedown", () => {
