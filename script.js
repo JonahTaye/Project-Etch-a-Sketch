@@ -1,14 +1,15 @@
 const container = document.querySelector("div")
-let gridSize = 64
+let gridSize = 16
+let widthSize = container.clientWidth / gridSize
+let heightSize = container.clientHeight / gridSize
 let grid = []
 
 for (i = 0; i < gridSize * gridSize; i++) {
     grid[i] = document.createElement("div")
     grid[i].classList.add("cell")
-    let widthSize = container.clientWidth / gridSize
-    let heightSize = container.clientHeight / gridSize
+    
 
-    grid[i].setAttribute("style", "flex-grow: 1; flex-shrink: 0; ")
+    grid[i].style.flexGrow = "1"
     grid[i].style.width = `${widthSize}px`
     grid[i].style.height = `${heightSize}px`
     container.appendChild(grid[i])
