@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px red solid
 }
 
 body {
@@ -10,14 +9,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     height: 100vh;
     width: 100%;
+    background-color: black;
 }
 
 .header {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    color: white;
+}
+
+.header div {
+    font-size: 40px;
     font-weight: 900;
 }
 
@@ -27,13 +36,68 @@ body {
     flex-shrink: 0;
     height: 500px;
     width: 500px;
-    border: 1px black solid;
+    border: 5px white solid;
+    border-radius: 8px;
 }
 
 .button {
     display: flex;
+    align-items: center;
     gap: 50px;
+    margin-bottom: 20px;
 }
+
+.button button {
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 2px black solid;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default styles */
+    appearance: none;
+    width: 100%; 
+    height: 8px;
+    background: lightgray; /* Track color */
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Change the track color */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: white; /* Track color */
+    height: 8px;
+    border-radius: 4px;
+}
+
+/* Change the thumb (circle) color */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px white solid;
+    background: black; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -4px; /* Center the thumb */
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+    background: white;
+}
+
+input[type="range"]::-moz-range-thumb {
+    border: 1px white solid;
+    background: black;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 
 .cell {
     user-select: none; /* Prevents text selection */

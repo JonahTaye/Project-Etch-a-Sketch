@@ -32,13 +32,13 @@ function sketchPad() {
     document.querySelectorAll(".cell").forEach(box => {
         box.addEventListener("mousedown", () => {
             isMousedown = true
-            box.style.backgroundColor = "black"
+            box.style.backgroundColor = "white"
             console.log("here")
         })
 
         box.addEventListener("mouseover", () => {
             if (isMousedown) {
-                box.style.backgroundColor = "black"
+                box.style.backgroundColor = "white"
             }
         })
     })
@@ -62,6 +62,6 @@ inputValue.addEventListener("click", () => {
 
 clearAll.addEventListener("click", () => {
     document.querySelectorAll(".cell").forEach(box => {
-        box.style.backgroundColor = "white"
+        box.style.backgroundColor = "black"
     })
 })
